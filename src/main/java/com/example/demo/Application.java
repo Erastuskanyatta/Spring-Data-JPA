@@ -27,6 +27,11 @@ public class Application {
     @Bean
     CommandLineRunner commandLineRunner(StudentRepository studentRepository) {
         return args -> {
+            Student Ash = new Student(
+                    "Ashly",
+                    "Apondi",
+                    "ash@gmail.com"
+            );
             Student Jimmy = new Student(
                     "Jimmy",
                     "Kibaki",
@@ -52,6 +57,7 @@ public class Application {
             );
             studentRepository.saveAll(
                     List.of(
+                            Ash,
                             Jimmy,
                             Eras,
                             Peterson,
